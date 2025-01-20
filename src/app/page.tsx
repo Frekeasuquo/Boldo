@@ -10,64 +10,38 @@ import Service from "./service/page";
 const Home = () => {
 
     return (
-    <>
-        <section className="flex bg-background justify-end items-start relative object-cover h-[900px]">
-            <MaxWidthWrapper>
-                <header className="relative py-4">
-                    <div className="border-none">
-                        <div className="flex items-center justify-between ">
-                            <div className="">
-                                <Link href='/' className="flex items-center gap-0.5 ">
-                                    <span><Image src="/images/LogoShape.png" alt="Logo" width="24" height='24' /></span>
-                                    <span className="text-xxl text-white font-bold ">Boldo</span>
-                                </Link>
-
-                                {/* TODO: Mobile nav*/}
+        <>
+            <section className="flex bg-background justify-end items-start object-cover h-full ">
+                <MaxWidthWrapper>
+                    {/* Main Content Section */}
+                    <section className="flex flex-col md:flex-row py-6 text-white gap-6 lg:gap-28 justify-between items-center w-full">
+                        {/* Left Text Section */}
+                        <div className="z-40 flex-1 pt-16 text-center md:text-left">
+                            <div className="w-full md:w-[87%] mx-auto md:mx-0">
+                                <span className="text-xl font-sans flex-wrap md:text-xl lg:text-xxl ">Save time by building fast with Boldo Template</span>
+                                <p className="leading-relaxed py-3 text-xs md:text-s">Funding handshake buyer business-to-business metrics iPad partnership. First mover advantage innovator success deployment non-disclosure.</p>
                             </div>
-
-                            <div className="flex gap-6 z-30 items-center">
-                                <div className=" flex gap-6 text-s text-white font-semibold">
-                                    <Link href="/product">Product</Link>
-                                    <Link href="/service">Services</Link>
-                                    <Link href="/about">About</Link>
-                                </div>
-                                <div className="text-white font-semibold">
-                                    <Button label="Log In" variant="danger" className="w-32 h-10" />
-                                </div>
+                            {/* Buttons */}
+                            <div className="flex flex-col md:flex-row gap-4 py-4 justify-center md:justify-start ">
+                                <Button label="Buy template" variant="primary" className="w-full md:w-52 h-12 "/>
+                                <Button label="Explore"  variant="secondary" className="w-full md:w-40 h-12 border-2 border-solid border-white-100"/>
                             </div>
+                            
                         </div>
-                    </div>
-                </header>
-                <section className="flex py-6 text-white gap-28">
-                    <div className="z-40 flex-1 py-16">
-                        <div className="w-[87%]">
-                            <span className="text-xxl font-sans flex-wrap ">Save time by building fast with Boldo Template</span>
-                            <p className="leading-relaxed py-3">Funding handshake buyer business-to-business metrics iPad partnership. First mover advantage innovator success deployment non-disclosure.</p>
+                        {/* Right Image Section */}
+                        <div className="z-40 ">
+                            <Image src='/images/hero.png' alt="" width='400' height='232' className="  h-auto  md:w-[460px] lg:w-[494px] object-contain"/>
                         </div>
-                        <div className="flex gap-6 py-4">
-                            <Button label="Buy template" variant="primary" className="w-52 h-12"/>
-                            <Button label="Explore"  variant="secondary" className="w-40 h-12 border-2 border-solid border-white-100"/>
-                        </div>
-                        
-                    </div>
-                    <div className="z-40 flex-0">
-                        <div className="">
-                            <Image src='/images/frame1.png' alt="" width='493' height='232' />
-                        </div>
-                        <div className="flex pt-6 gap-8 justify-between">
-                            <Image src='/images/frame2.png' alt="" width='190' height='165' />
-                            <Image src='/images/frame3.png' alt="" width='266' height='165' />
-                        </div>
-                    </div>
-                </section>
-                <section className="py-24">
-                    <SliderComp></SliderComp>
-                </section>
-            </MaxWidthWrapper>
-            <Image src="/images/Ellipse.png" alt="" width="700" height="600" className=" absolute object-contain"/>
-        </section>
-        <Service />
-      </>
+                    </section>
+                    {/*Logo Slider*/}
+                    <section className="py-12 md:py-12 lg:py-20">
+                        <SliderComp></SliderComp>
+                    </section>
+                </MaxWidthWrapper>
+                <Image src="/images/Ellipse.png" alt="" width="300" height="400" className="absolute top-0 object-contain w-[180px] sm:w-[400px] md:w-[550px] lg:w-[700px]"/>
+            </section>
+            <Service />
+        </>
     )
 };
 

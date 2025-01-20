@@ -10,9 +10,9 @@ const NavbarWrapper = () => {
     const isProductPage = pathname === "/product";
 
     // Hide Navbar for the homepage
-    if (pathname === "/") {
-        return null;
-    }
+    // if (pathname === "/ll") {
+    //     return null;
+    // }
 
     return (
         <Navbar
@@ -24,30 +24,5 @@ const NavbarWrapper = () => {
 export default NavbarWrapper;
 
 
-
-
-
-
-// const NavbarWrapper = () => {
-//     const pathname = usePathname();
-
-//     // Determine the custom class to apply based on the current route
-//     const customClassName = pathname === "/product" ? "bg-page " : "";
-    
-
-
-//     // Hide Navbar for specific route (like homepage)
-//     if (pathname === "/") {
-//         return null;
-//     }
-
-//     return (
-//         <>
-//             <Navbar className={customClassName} />  
-//         </>
-//     );;
-// };
-
-// export default NavbarWrapper;
 
 

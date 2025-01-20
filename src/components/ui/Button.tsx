@@ -33,7 +33,7 @@ const Button: React.FC<ButtonProps> = ({
             type={type}
             onClick={onClick}
             disabled={disabled}
-            className={`px-4 py-2 rounded-full focus:ring-1 focus:ring-offset-1 text-s font-bold font-sans ${
+            className={`px-4 rounded-full focus:ring-1 focus:ring-offset-1 text-s font-bold font-sans ${
                 variantClasses[variant]
             } ${disabled ? 'opacity-50 cursor-not-allowed' : ''} ${className}`}
         >

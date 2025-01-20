@@ -19,9 +19,9 @@ export default function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
 
   return (
-    <html lang="en" className="h-full">
-      <body className={cn("relative h-full antialiased", manrope.className)}>
-        <main className="relative flex flex-col min-h-screen">
+    <html lang="en" className="h-full w-full">
+      <body className={cn("relative h-full w-full antialiased", manrope.className)}>
+        <main className="relative flex flex-col min-h-screen w-full">
           <NavbarWrapper />
           <div>{children}</div>
         </main>
