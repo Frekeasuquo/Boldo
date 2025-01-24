@@ -30,7 +30,7 @@ const Home = () => {
                         </div>
                         {/* Right Image Section */}
                         <div className="z-40 ">
-                            <Image src='/images/hero.png' alt="" width='400' height='232' className="  h-auto  md:w-[460px] lg:w-[494px] object-contain"/>
+                            <Image src='/images/hero.png' alt="" width='400' height='232' className=" h-auto  md:w-[460px] lg:w-[494px] object-contain"/>
                         </div>
                     </section>
                     {/*Logo Slider*/}

@@ -15,8 +15,33 @@ input::placeholder {
   color: black;
 }
 
-.pic {
-  margin-top: -8rem;
+@layer utilities {
+  .grid-image {
+    @apply grid grid-cols-2 gap-6; /* Default grid for smaller screens */
+    grid-template-areas:
+      "img1 img2"
+      "imgM img3"
+      "imgM img4";
+  }
+
+  @media (min-width: 48em) {
+    .grid-image {
+      @apply p-12; /* Padding for larger screens */
+      grid-template-columns: auto 36.4% auto;
+      grid-template-areas:
+        "img1 imgM img2"
+        "img3 imgM img4";
+      gap: 2.5rem 3.125rem; /* Custom row and column gap */
+      margin-top: -2.5rem;
+    }
+  }
+
+  @media (min-width: 48em) {
+    .grid-image {
+      grid-row: auto;
+      grid-template-rows: none;
+    }
+  }
 }
 
 .no-scrollbar::-webkit-scrollbar {

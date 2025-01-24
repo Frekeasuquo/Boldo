@@ -10,30 +10,33 @@ const Product = () => {
     
     return (
         <section className="bg-white">
-            <div className=" text-black ">
+            <div className=" text-black">
                 <MaxWidthWrapper>
-                    <div className="flex flex-col items-center text-black gap-4 p-5">
-                        <h4 className="text-lg">Blog</h4>
-                        <h2 className="text-yl font-sans font-normal size-1/2 text-center leading-normal">Thought and words</h2>
+                    {/* Blog Title Section */}
+                    <div className="flex flex-col items-center text-center gap-4 p-5">
+                        <h4 className="text-s sm:text-lg">Blog</h4>
+                        <h2 className="text-xl sm:text-xxl lg:text-yl font-sans font-normal leading-snug">Thought and words</h2>
                     </div>
-                    <div className="flex justify-between pt-16 gap-10">
-                        <Image src="/images/Rectangle16.png" className="object-contain w-1/2" alt="Logo" width="500" height='140' />
-                        <div className="flex flex-col justify-center p-4 w-1/2">
-                            <div className="flex gap-4 py-2">
-                                <h3 className="text-s font-bold font-alt">Category</h3>
-                                <p className="text-s font-alt text-#777777">November 22, 2021</p>
+                    {/* Featured Blog Section */}
+                    <div className="flex flex-wrap lg:flex-nowrap items-center justify-between pt-16 gap-10">
+                        <Image src="/images/Rectangle16.png" className="object-contain w-full lg:w-1/2" alt="Logo" width="500" height='140' />
+                        <div className="flex flex-col justify-center p-4 w-full lg:w-1/2">
+                            <div className="flex gap-4 py-2 text-s">
+                                <h3 className="font-bold font-alt">Category</h3>
+                                <p className="font-alt text-#777777">November 22, 2021</p>
                             </div>
-                            <h2 className="text-xxl font-sans">
+                            <h2 className="text-lg sm:text-xl lg:text-xxl font-sans mb-4">
                                 Pitch termsheet backing validation focus release.
                             </h2>
-                            <div className=" flex gap-4 py-2">
+                            <div className=" flex items-center gap-4 py-2">
                                 <Image src="/images/Ellipse16.png" className="object-contain" alt="Logo" width="24" height='24' />
                                 <p className="text-s font-alt text-black">Chandler Bling</p>
                             </div>
                         </div>
                     </div>
-                    <div className=" py-20 ">
-                        <div className="flex-grow border-t border-black w-full"/>
+                    {/* Divider */}
+                    <div className=" py-12 ">
+                        <div className="border-t border-black w-full"/>
                     </div>
                 </MaxWidthWrapper>
             </div> 
