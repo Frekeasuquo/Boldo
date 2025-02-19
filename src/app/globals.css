@@ -1,0 +1,64 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700&family=Open+Sans:wght@400;600;700&display=swap");
+
+:root {
+  --background: #0A2640;
+  --foreground: #1C3D5B;
+  --button: #65E4A3;
+  --page: #E5E5E5;
+}
+
+input::placeholder {
+  color: black;
+}
+
+@layer utilities {
+  .grid-image {
+    @apply grid grid-cols-2 gap-6; /* Default grid for smaller screens */
+    grid-template-areas:
+      "img1 img2"
+      "imgM img3"
+      "imgM img4";
+  }
+
+  @media (min-width: 48em) {
+    .grid-image {
+      @apply p-12; /* Padding for larger screens */
+      grid-template-columns: auto 36.4% auto;
+      grid-template-areas:
+        "img1 imgM img2"
+        "img3 imgM img4";
+      gap: 2.5rem 3.125rem; /* Custom row and column gap */
+      margin-top: -2.5rem;
+    }
+  }
+
+  @media (min-width: 48em) {
+    .grid-image {
+      grid-row: auto;
+      grid-template-rows: none;
+    }
+  }
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+
+
+/* @media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+} */
+
+
